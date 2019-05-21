@@ -1,0 +1,14 @@
+<h1><%= @task.title %></h1>
+<h3><%= @task.details %></h3>
+ <div>
+  	<%if @task.completed == true  %>
+  	  <input type="checkbox" name="tasks" checked>
+  	<% else %>
+	  <input type="checkbox" name="tasks">
+  	<% end %>	
+  <label for="tasks"> This task is completed</label>
+ </div>
+
+ <%=link_to "Back to tasks", tasks_path%>
+ <%= link_to "Update task", edit_path(@task) %>
+  
